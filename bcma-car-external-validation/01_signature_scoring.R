@@ -2,8 +2,8 @@
 # Per-cell module scores for the signature panel, on CAR+ cells.
 #
 # Scores every signature with AddModuleScore and saves a slim metadata table
-# (scores, a subset of gene expression, UMAP coordinates and the clinical columns) 
-# so 03_regulon_pseudobulk.R can run off the scores without reloading the 1.8 GB object
+# (scores, a subset of gene expression, UMAP coordinates, and the clinical columns) 
+# mostly so 03_regulon_pseudobulk.R can run off scores w/o reloading the giant obj
 #
 # Input:  Rade et al. integrated T-cell object, Signatures
 # Output: interim/rade_meta_scored_carpos.rds
