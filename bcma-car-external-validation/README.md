@@ -1,22 +1,22 @@
-# External validation of the dual-BCMA CAR T case in the Rade et al. atlas
+# External validation of the dual-BCMA CAR T case with Rade et al. atlas
 
 Analysis code for Figure 4d-h and Supplementary Figure S15.
 
 The manuscript reports a single patient treated with dual BCMA-targeted CAR T
 cells. To test whether the phenotypes seen in that case also separate cilta-cel
 from ide-cel at the cohort level, the same signatures and gene panels were run
-against the published single-cell atlas of Rade et al. (2026).
+against the published single-cell atlas of Rade et al (2026).
 
 The atlas profiles all post-infusion T cells rather than sorted CAR T cells, so
 every analysis here is restricted to CAR-transgene-positive cells first, using the
-atlas authors' own `CAR_BY_EXPRS` call. Comparisons are therefore CAR+ versus 
+atlas authors' own `CAR_BY_EXPRS` call. Comparisons are CAR+ versus 
 CAR+ throughout.
 
 Sample sizes after gating: 25 ide-cel and 18 cilta-cel patients with
 post-infusion CAR+ cells; 17 ide and 7 cilta patients clear the per-patient
 cell-count threshold for the CD8 tests, and 7 ide and 6 cilta for CD4.
 
-## Where each panel comes from
+## Fig panel summary
 
 | Panel | Script | Output file |
 |---|---|---|
@@ -41,7 +41,7 @@ Illustrator. Specifically:
 - Fig. S15b is *GNLY, NKG7, BAX, CD27, TNFRSF9* and *FYN* from the CD8 violin
   sheet; Fig. S15d is *TNFRSF18, CX3CR1, BAX, FOXO1* and *ICOS* from the CD4 one.
 
-## Method notes
+## A few notes notes
 
 **Pseudobulk everywhere.** The cohort is 43 patients, so all tests are on
 per-patient means rather than per-cell values. Treating cells as independent
@@ -93,7 +93,7 @@ BiocManager::install("fgsea")
 Random seeds are fixed at 42 for `AddModuleScore` and `fgseaMultilevel`, so
 repeated runs on the same input give identical numbers.
 
-## Layout
+## All files layout
 
 ```
 config.R                      paths and the per-patient cell minimum
