@@ -1,0 +1,17 @@
+# Outputs and cached intermediates
+results/
+interim/
+
+# Input data is not distributed with the code
+data/
+*.Rds
+*.rds
+
+# R session cruft
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+.DS_Store
